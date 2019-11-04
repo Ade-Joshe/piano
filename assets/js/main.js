@@ -46,14 +46,17 @@ function CountKeys() {
 
 function getKeys() {
 	[...keys].map((element, index) => {
-		return element.addEventListener('click', () =>
-			play(index))
+		return element.addEventListener('click', () => {
+			return play(index);
+		}
+		)
 	});
 }
 
 function play(index) {
 	let noteSounds = [...notes]
 	noteSounds[index].play();
+	// noteSounds[index].playBackRate = 2.0;
 	// console.log(index);
 }
 
@@ -96,7 +99,7 @@ function showNames() {
 	// keys.
 }
 
-async function useKeyboard() {
+function useKeyboard() {
 	document.addEventListener('keydown', (e) => {
 		let definedKeys = [65, 87, 83, 69, 68, 70, 84, 71, 89,
 			72, 85, 74, 75, 79, 76, 80, 59, 222, 221, 163];
