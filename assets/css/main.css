@@ -927,13 +927,6 @@ body {
             display: flex;
         }
 
-	@media screen and (max-width: 500px) {
-
-		#controls > div {
-			display: none;
-		}
-
-	}
 		
 .headerLogo {
 	display: flex;
@@ -971,7 +964,7 @@ body {
 
 #pianoBody {
 	width: 400px;
-	height: 40vh;
+	height: 300px;
 	padding: 50px 20px 20px 20px;
 	margin: auto;
 	background-color: #000000b0;
@@ -1008,4 +1001,21 @@ body {
 	margin: 50px 20px 20px 20px;
 	padding: 20px;
 	border-radius: 8px;
+}
+
+@media screen and (max-width: 500px) {
+
+	#controls > div {
+		display: none;
+	}
+
+	#pianoBody {
+		width: 90%;
+		height: 283px
+	}
+
+	.blackKeys {
+		margin-left: 25px;
+
+	}
 }
